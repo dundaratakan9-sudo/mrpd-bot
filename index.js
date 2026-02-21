@@ -19,7 +19,7 @@ const {
   VoiceConnectionStatus,
 } = require("@discordjs/voice");
 
-const ytdl = require("ytdl-core");
+const ytdl = require("@distube/ytdl-core");
 
 // -------- Client --------
 const client = new Client({
@@ -418,4 +418,5 @@ client.on("messageCreate", (message) => {
 
 
 client.login(process.env.TOKEN.trim());
+
 

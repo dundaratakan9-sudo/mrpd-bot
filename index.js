@@ -1,5 +1,8 @@
 require("dotenv").config();
 
+const ffmpegPath = require("ffmpeg-static");
+process.env.FFMPEG_PATH = ffmpegPath;
+
 const {
   Client,
   GatewayIntentBits,
@@ -415,3 +418,4 @@ client.on("messageCreate", (message) => {
 
 
 client.login(process.env.TOKEN.trim());
+

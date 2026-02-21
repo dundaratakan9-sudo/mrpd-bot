@@ -413,4 +413,5 @@ client.on("messageCreate", (message) => {
   if (message.content.toLowerCase() === "sa") message.reply("Aleyküm selam 👋");
 });
 
-client.login(process.env.TOKEN);
+
+client.login(process.env.TOKEN.trim());

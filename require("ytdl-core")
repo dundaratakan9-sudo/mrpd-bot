@@ -3,11 +3,13 @@ require("dotenv").config();
 const ffmpeg = require("ffmpeg-static");
 process.env.FFMPEG_PATH = ffmpeg;
 
+const play = require("play-dl");
+
 const {
   Client,
   GatewayIntentBits,
   Partials,
-  PermissionsBitField,
+  PermissionsBitField,s
   ChannelType,
 } = require("discord.js");
 
@@ -19,7 +21,6 @@ const {
   VoiceConnectionStatus,
 } = require("@discordjs/voice");
 
-const ytdl = require("@distube/ytdl-core");
 
 // -------- Client --------
 const client = new Client({
@@ -418,6 +419,7 @@ client.on("messageCreate", (message) => {
 
 
 client.login(process.env.TOKEN.trim());
+
 
 
 
